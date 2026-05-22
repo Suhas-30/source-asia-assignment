@@ -1,7 +1,7 @@
-// src/config/swagger.js
 const userDocs = require('../modules/user/swagger');
-const rateLimiterDocs = require("../modules/rateLimiter/swagger")
-const productDocs = require("../modules/products/swagger")
+const rateLimiterDocs = require('../modules/rateLimiter/swagger');
+const productDocs = require('../modules/products/swagger');
+
 module.exports = {
   openapi: '3.0.0',
   info: {
@@ -11,6 +11,10 @@ module.exports = {
   },
   servers: [
     {
+      url: 'https://source-asia-assignment.onrender.com/api',
+      description: 'Production server',
+    },
+    {
       url: 'http://localhost:3000/api',
       description: 'Development server',
     },
@@ -18,6 +22,6 @@ module.exports = {
   paths: {
     ...userDocs,
     ...rateLimiterDocs,
-    ...productDocs
+    ...productDocs,
   },
 };
