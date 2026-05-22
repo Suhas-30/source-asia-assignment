@@ -21,12 +21,6 @@ A rate-limited API and product catalog built with Node.js and Express.
 
 ---
 
-## AI Tools Used
-
-Claude (Anthropic) was used for guidance on project structure, design patterns, and code review.
-
----
-
 ## Project Structure
 
 ```
