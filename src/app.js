@@ -7,6 +7,7 @@ const userRoutes = require('./modules/user/routes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./config/swagger');
 const rateLimiterRoutes = require('./modules/rateLimiter/routes')
+const productRoutes = require('./modules/products/routes')
 const app = express()
 
 
@@ -32,6 +33,7 @@ router.get('/health', (req, res)=>{
 
 
 router.use('/users', userRoutes);
+router.use('/products', productRoutes);
 
 app.use(config.API_PREFIX, router)
 

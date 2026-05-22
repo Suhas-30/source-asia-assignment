@@ -1,6 +1,7 @@
 // src/config/swagger.js
 const userDocs = require('../modules/user/swagger');
 const rateLimiterDocs = require("../modules/rateLimiter/swagger")
+const productDocs = require("../modules/products/swagger")
 module.exports = {
   openapi: '3.0.0',
   info: {
@@ -17,5 +18,6 @@ module.exports = {
   paths: {
     ...userDocs,
     ...rateLimiterDocs,
+    ...productDocs
   },
 };
